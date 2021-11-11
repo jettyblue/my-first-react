@@ -13,11 +13,18 @@ const initialUser = {
 
 function App() {
   const [user, setUser] = useState(initialUser);
-  
+
   return (
     <div className="App">
       <h1>CaseyBook</h1>
       <p>It's like facebook only made by some dork named Casey</p>
+      <div className="profile-wrapper">
+        <h2>{user.username}</h2>
+        <h3>{user.background}</h3>
+        <p>Age: {user.age}</p>
+        <img src={user.profilePic} alt="Thor, god of thunder" />
+        {user.hobbies.map((hobby, idx) => <p key={idx}>{hobby}</p>)}
+      </div>
     </div>
   );
 }
