@@ -24,6 +24,7 @@ function App() {
       <p>It's like facebook only made by some dork named Casey</p>
       <nav>
         <Link to="/profile">Profile</Link>
+        <Link to="/">HomePage</Link>
       </nav>
       <Route path="/profile">
         <Profile user={user} />
