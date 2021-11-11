@@ -4,6 +4,7 @@ import { Route, Link } from 'react-router-dom';
 import './App.css';
 
 import Profile from './Components/Profile';
+import PostForm from './Components/PostForm';
 
 const initialUser = {
   username: "CRHarding",
@@ -24,10 +25,14 @@ function App() {
       <p>It's like facebook only made by some dork named Casey</p>
       <nav>
         <Link to="/profile">Profile</Link>
+        <Link to="/posts/create">Post</Link>
         <Link to="/">HomePage</Link>
       </nav>
       <Route path="/profile">
         <Profile user={user} />
+      </Route>
+      <Route path="/posts/create">
+        <PostForm />
       </Route>
     </div>
   );
