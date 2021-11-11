@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Route, Link } from 'react-router-dom';
+
 import './App.css';
 
 import Profile from './Components/Profile';
@@ -20,7 +22,12 @@ function App() {
     <div className="App">
       <h1>CaseyBook</h1>
       <p>It's like facebook only made by some dork named Casey</p>
-      <Profile user={user} />
+      <nav>
+        <Link to="/profile">Profile</Link>
+      </nav>
+      <Route path="/profile">
+        <Profile user={user} />
+      </Route>
     </div>
   );
 }
