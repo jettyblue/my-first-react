@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 
+import Profile from './Components/Profile';
+
 const initialUser = {
   username: "CRHarding",
   age: 74,
@@ -18,15 +20,7 @@ function App() {
     <div className="App">
       <h1>CaseyBook</h1>
       <p>It's like facebook only made by some dork named Casey</p>
-      <div className="profile-wrapper">
-        <h2>{user.username}</h2>
-        <h3>{user.background}</h3>
-        <p>Age: {user.age}</p>
-        <img src={user.profilePic} alt="Thor, god of thunder" />
-        <div className="hobby-wrapper">
-          {user.hobbies.map((hobby, idx) => <p key={idx}>{hobby}</p>)}
-        </div>
-      </div>
+      <Profile user={user} />
     </div>
   );
 }
