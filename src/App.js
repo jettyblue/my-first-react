@@ -23,7 +23,9 @@ function App() {
         <h3>{user.background}</h3>
         <p>Age: {user.age}</p>
         <img src={user.profilePic} alt="Thor, god of thunder" />
-        {user.hobbies.map((hobby, idx) => <p key={idx}>{hobby}</p>)}
+        <div className="hobby-wrapper">
+          {user.hobbies.map((hobby, idx) => <p key={idx}>{hobby}</p>)}
+        </div>
       </div>
     </div>
   );

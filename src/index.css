@@ -15,3 +15,8 @@ code {
 img {
   max-width: 200px;
 }
+
+.hobby-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
