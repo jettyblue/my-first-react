@@ -13,11 +13,31 @@ const initialUser = {
   location: "Brooklyn, NY",
   profilePic: "http://pluspng.com/img-png/thor-png-download-png-image-thor-png-image-1000.png",
   hobbies: ["reading", "writing", "eating", "sleeping", "listening to music"],
-  posts: []
+  posts: [],
+  id: "superSecretId"
+}
+
+const initialFormValues = {
+  title: '',
+  content: '',
+  tags: ''
 }
 
 function App() {
   const [user, setUser] = useState(initialUser);
+  const [formValues, setFormValues] = useState(initialFormValues);
+
+  const handleChange = (name, value) => {
+    setFormValues({ ...formValues, [name]: value })
+  }
+
+  const handleSubmit = () => {
+    const tagsArr = formValues.tags.split(',');
+    formValues.tags = tagsArr;
+    formValues.createdAt = new Date();
+    formValues.posterId = user.id;
+    setUser({ ...user, posts: [formValues, ...user.posts] });
+  }
 
   return (
     <div className="App">
@@ -32,7 +52,11 @@ function App() {
         <Profile user={user} />
       </Route>
       <Route path="/posts/create">
-        <PostForm />
+        <PostForm 
+          change={handleChange} 
+          submit={handleSubmit} 
+          values={formValues} 
+        />
       </Route>
     </div>
   );
