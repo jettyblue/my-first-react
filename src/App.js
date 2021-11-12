@@ -38,6 +38,7 @@ function App() {
     formValues.createdAt = new Date();
     formValues.posterId = user.id;
     setUser({ ...user, posts: [formValues, ...user.posts] });
+    setFormValues(initialFormValues);
   }
 
   return (

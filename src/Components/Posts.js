@@ -6,7 +6,7 @@ const Posts = (props) => {
   return (
     <div className="posts-wrapper">
       {props.posts.map((post, idx) => (
-        <Post post={post} key={idx} />
+        <Post post={post} key={idx} user={props.user} />
       ))}
     </div>
   )
