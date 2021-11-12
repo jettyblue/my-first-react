@@ -5,6 +5,7 @@ import './App.css';
 
 import Profile from './Components/Profile';
 import PostForm from './Components/PostForm';
+import Posts from './Components/Posts';
 
 const initialUser = {
   username: "CRHarding",
@@ -46,17 +47,21 @@ function App() {
       <nav>
         <Link to="/profile">Profile</Link>
         <Link to="/posts/create">Post</Link>
+        <Link to="/posts">See All Posts</Link>
         <Link to="/">HomePage</Link>
       </nav>
       <Route path="/profile">
         <Profile user={user} />
       </Route>
-      <Route path="/posts/create">
+      <Route exact path="/posts/create">
         <PostForm 
           change={handleChange} 
           submit={handleSubmit} 
           values={formValues} 
         />
+      </Route>
+      <Route path="/posts">
+        <Posts />
       </Route>
     </div>
   );
