@@ -1,8 +1,14 @@
 import React from 'react';
 
-const Posts = (prop) => {
+import Post from './Post';
+
+const Posts = (props) => {
   return (
-    <h1>POSTS</h1>
+    <div className="posts-wrapper">
+      {props.posts.map((post, idx) => (
+        <Post post={post} key={idx} />
+      ))}
+    </div>
   )
 }
 

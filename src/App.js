@@ -61,7 +61,7 @@ function App() {
         />
       </Route>
       <Route path="/posts">
-        <Posts />
+        <Posts posts={user.posts} user={user} />
       </Route>
     </div>
   );
