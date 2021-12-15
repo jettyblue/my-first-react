@@ -26,7 +26,7 @@ export default function MemberForm(props) {
                 <input
                   name='name'  // this name has to be exactly the same as label name
                   type='text'
-                  placeholder='Type your member name here'
+                  placeholder='Type your name here'
                   maxLength='50'
                   value={values.memberName}
                   onChange={onChange}

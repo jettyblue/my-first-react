@@ -26,8 +26,8 @@ function App() {
 
   const submitForm = () => {
     const newMember = {
-      memberName: formValues.memberName.trim(),
-      email: formValues.email.trim(),
+      memberName: formValues.memberName,
+      email: formValues.email,
       role: formValues.role
     }
 
