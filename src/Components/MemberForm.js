@@ -46,9 +46,9 @@ export default function MemberForm(props) {
           <label>Role
                 <select value={values.role} name='role' onChange={onChange}>
                   <option value=''>-- Select a Role --</option>
-                  <option value='Newbie'>New Member</option>
-                  <option value='Current'>Current Member</option>
-                  <option value='Past'>Previous Member</option>
+                  <option value='New Member'>New Member</option>
+                  <option value='Current Member'>Current Member</option>
+                  <option value='Previous Member'>Previous Member</option>
                 </select>
           </label>
   
