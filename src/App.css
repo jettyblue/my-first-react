@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+label {
+  padding: 8px 12px;
+}
+
+input {
+  margin-left: 0.5%;
+}
+
+button {
+  margin-top: 2%;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: slategrey;
+  color: white;
+}
+
+select {
+  margin-left: 0.5%;
+}
